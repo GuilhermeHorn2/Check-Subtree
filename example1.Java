@@ -27,7 +27,7 @@ public class main_misc {
      t1.add(7, 7);
      t1.add(8, 1);
      //
-     //t1.add(9,1);//(1)
+     t1.add(9,1);//(1)
      
      t1.link_left(0, 1);
      t1.link_right(0, 6);
@@ -38,7 +38,7 @@ public class main_misc {
      t1.link_left(3, 4);
      t1.link_right(3, 5);
      //
-     //t1.link_left(5, 9);//(2)
+     t1.link_left(5, 9);//(2)
      
      t1.link_right(6, 7);
      t1.link_left(7, 8);
@@ -61,7 +61,7 @@ public class main_misc {
 	}
 		
 	
-	private static void pre_order(Node n,LinkedList<Node> l){
+	private static void pre_order(Node n,ArrayList<Node> l){
 		
 		if(n != null){
 			l.add(n);
@@ -75,19 +75,19 @@ public class main_misc {
 		
 	     boolean subtree = false;
 		 
-	     LinkedList<Node> all_nodes_t1 = new LinkedList<>();
+	     ArrayList<Node> all_nodes_t1 = new ArrayList<>();
 	     pre_order(t1.get_node(0),all_nodes_t1);
 	     
 	     Node n = t2.get_node(0);
 	     
-	     LinkedList<Node> t2_subtree = new LinkedList<>();
+	     ArrayList<Node> t2_subtree = new ArrayList<>();
 	     pre_order(n,t2_subtree);
 	     
 	     for(int i = 0;i < all_nodes_t1.size();i++){
 	    	 Node k = all_nodes_t1.get(i);
 	    	 if(k.value == n.value){
 	    		 
-	    		 LinkedList<Node> t1_subtree = new LinkedList<>();
+	    		 ArrayList<Node> t1_subtree = new ArrayList<>();
 	    		 //LinkedList<Node> t2_subtree = new LinkedList<>();
 	    		 pre_order(k,t1_subtree);
 	    		// pre_order(n,t2_subtree);
@@ -118,70 +118,3 @@ public class main_misc {
 	}
 	
 	
-		
-	
-		
-
-	
-  
-	
-    
-	
-		
-
-	
-
-	
-		
-		
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
-
-	
-	
-
-	
-		
-	
-	
-
-
-	
-
-	
-	
-
-
-	
-	
-	
-
-	
-
-
-	
-	
-
-	
-		
-	
-	
-
-
-	
-
-	
-	
-
